@@ -8,6 +8,7 @@
 
 header,
 header *,
-main section:first-child * {
+main section:first-child *,
+main section:nth-child(2) * {
 	@apply border-none;
 }
