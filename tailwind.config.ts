@@ -20,6 +20,9 @@ const config: Config = {
 					'very-light-gray': '#FAFAFA',
 				},
 			},
+			transitionProperty: {
+				header: 'background-color, transform',
+			},
 		},
 	},
 	plugins: [],

@@ -37,8 +37,10 @@ export default function Header() {
 	return (
 		<header
 			className={clsx(
-				'sticky top-0 left-0 py-4 px-5 mt-10',
-				isScrolled ? 'bg-white/50 backdrop-blur-md' : 'bg-transparent'
+				'fixed top-0 left-0 z-50 w-full py-4 px-5 mt-10 transition-header duration-300',
+				isScrolled
+					? 'bg-white/50 backdrop-blur-md -translate-y-10'
+					: 'bg-transparent'
 			)}
 		>
 			<Container className='flex justify-between items-center'>
