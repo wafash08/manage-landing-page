@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro } from 'next/font/google';
 import clsx from 'clsx';
 import Header from './components/header';
 import './globals.css';
+import Footer from './components/footer';
 
 const be_vietnam_pro = Be_Vietnam_Pro({
 	weight: ['400', '500', '700'],
@@ -25,6 +26,7 @@ export default function RootLayout({
 			<body className={clsx(be_vietnam_pro.className, 'overflow-x-hidden')}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
