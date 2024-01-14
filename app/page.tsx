@@ -20,6 +20,33 @@ const FEATURES = [
 	},
 ];
 
+const TESTIMONIALS = [
+	{
+		avatar: '/images/avatar-anisha.png',
+		name: 'Anisha Li',
+		testminoy:
+			'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”',
+	},
+	{
+		avatar: '/images/avatar-ali.png',
+		name: 'Ali Bravo',
+		testminoy:
+			'“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”',
+	},
+	{
+		avatar: '/images/avatar-richard.png',
+		name: 'Richard Watts',
+		testminoy:
+			"“Manage allows us to provide structure and process. It keeps us organized and focused. I can't stop recommending them to everyone I talk to!”",
+	},
+	{
+		avatar: '/images/avatar-shanai.png',
+		name: 'Shanai Gough',
+		testminoy:
+			'“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”',
+	},
+];
+
 export default function Home() {
 	return (
 		<main>
@@ -32,7 +59,7 @@ export default function Home() {
 							x='774'
 							y='-62'
 							fill='#FFF0EC'
-							fill-rule='evenodd'
+							fillRule='evenodd'
 							rx='218'
 							transform='rotate(45 718.814 -291.157)'
 						/>
@@ -64,11 +91,11 @@ export default function Home() {
 					</div>
 				</Container>
 			</section>
-			<section className='mb-36'>
+			<section className='mb-36 relative'>
 				<Container className='flex'>
 					<div className='flex-1'>
 						<h2 className='max-w-[422px] text-[38px] font-medium text-primary-dark-blue leading-[44px] mb-[30px]'>
-							What’s different about Manage?
+							What&apos;s different about Manage?
 						</h2>
 						<p className='max-w-[326px] text-base font-normal text-neutral-dark-grayish-blue'>
 							Manage provides all the functionality your team needs, without the
@@ -99,6 +126,53 @@ export default function Home() {
 						})}
 					</ul>
 				</Container>
+				<div className='absolute -z-10 top-1/2 -left-[calc(33.3%+40px)]'>
+					<svg xmlns='http://www.w3.org/2000/svg' width='814' height='814'>
+						<rect
+							width='436'
+							height='970'
+							x='774'
+							y='-62'
+							fill='#FFF0EC'
+							fillRule='evenodd'
+							rx='218'
+							transform='rotate(45 718.814 -291.157)'
+						/>
+					</svg>
+				</div>
+			</section>
+			<section className='mb-[180px]'>
+				<h3 className='text-primary-dark-blue font-medium text-[38px] text-center mb-[72px]'>
+					What they&apos;ve said
+				</h3>
+				<ul className='flex gap-[30px] overflow-auto snap-x py-9 mb-12'>
+					{TESTIMONIALS.map(({ avatar, name, testminoy }) => {
+						return (
+							<li
+								key={name}
+								className='flex-shrink-0 w-full max-w-[538px] h-[220px] snap-center bg-[#FAFAFA] rounded px-4'
+							>
+								<div className='w-[72px] -mt-9 mb-6 aspect-square object-cover overflow-hidden mx-auto'>
+									<Image
+										src={avatar}
+										alt={`Avatar of ${name}`}
+										width={144}
+										height={144}
+									/>
+								</div>
+								<p className='text-center mb-[18px] text-primary-dark-blue font-medium'>
+									{name}
+								</p>
+								<p className='text-center text-neutral-dark-grayish-blue'>
+									{testminoy}
+								</p>
+							</li>
+						);
+					})}
+				</ul>
+				<div className='flex justify-center'>
+					<CTAButton>Get Started</CTAButton>
+				</div>
 			</section>
 		</main>
 	);

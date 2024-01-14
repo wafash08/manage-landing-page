@@ -9,6 +9,7 @@
 header,
 header *,
 main section:first-child *,
-main section:nth-child(2) * {
+main section:nth-child(2) *,
+main section:nth-child(3) * {
 	@apply border-none;
 }
