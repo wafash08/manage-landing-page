@@ -23,6 +23,12 @@ const config: Config = {
 			transitionProperty: {
 				header: 'background-color, transform',
 			},
+			backgroundImage: {
+				'simplify-section-desktop':
+					'url("/images/bg-simplify-section-desktop.svg")',
+				'simplify-section-mobile':
+					'url("/images/bg-simplify-section-mobile.svg")',
+			},
 		},
 	},
 	plugins: [],

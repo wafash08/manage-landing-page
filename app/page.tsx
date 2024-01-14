@@ -72,11 +72,11 @@ export default function Home() {
 							<p>together to build</p>
 							<p>better products.</p>
 						</h1>
-						<p className='text-base text-neutral-dark-grayish-blue font-normal leading-[24px] mb-10'>
+						<h4 className='text-base text-neutral-dark-grayish-blue font-normal leading-[24px] mb-10'>
 							<p>Manage makes it simple for software teams</p>
 							<p>to plan day-to-day tasks while keeping the</p>
 							<p>larger team goals in view.</p>
-						</p>
+						</h4>
 						<div>
 							<CTAButton>Get Started</CTAButton>
 						</div>
@@ -173,6 +173,16 @@ export default function Home() {
 				<div className='flex justify-center'>
 					<CTAButton>Get Started</CTAButton>
 				</div>
+			</section>
+			<section className='relative h-[220px] bg-primary-bright-red flex items-center bg-simplify-section-desktop bg-[220px_-120px] bg-no-repeat'>
+				<Container className='flex justify-between items-center'>
+					<h2 className='font-bold text-[38px] text-neutral-very-light-gray max-w-[460px] leading-tight'>
+						Simplify How your team works today
+					</h2>
+					<div>
+						<CTAButton variant='white'>Get Started</CTAButton>
+					</div>
+				</Container>
 			</section>
 		</main>
 	);
