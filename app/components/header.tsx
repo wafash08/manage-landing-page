@@ -34,11 +34,19 @@ const LINKS = [
 
 export default function Header() {
 	const isScrolled = useScroll();
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 
 	const handleOpenMenu = () => {
 		setOpen(!open);
 	};
+
+	useEffect(() => {
+		if (open) {
+			document.body.classList.add('overflow-y-hidden');
+		} else {
+			document.body.classList.remove('overflow-y-hidden');
+		}
+	}, [open]);
 
 	console.log(open);
 
@@ -54,8 +62,8 @@ export default function Header() {
 			<Container className='flex justify-between items-center'>
 				<Link href='/' className='flex items-center'>
 					<span className='sr-only'>Manage Home Page</span>
-					<Logo className='hidden md:block' />
-					<LogoMobile className='block md:hidden' />
+					<Logo className='hidden md:block text-primary-dark-blue' />
+					<LogoMobile className='block md:hidden text-primary-dark-blue' />
 				</Link>
 
 				<nav className='hidden md:block'>
@@ -130,9 +138,10 @@ export default function Header() {
 
 				<div
 					className={clsx(
-						'block md:hidden absolute w-full h-screen top-0 left-0 bg-transparent transition-transform',
+						'block md:hidden absolute w-full h-screen top-0 left-0 bg-transparent transition-[transform_background-image]',
 						isScrolled ? 'mt-[74px]' : 'mt-[78px]',
-						open ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+						open ? 'translate-x-0' : 'translate-x-full pointer-events-none',
+						open && 'bg-gradient-to-b from-transparent via-black/10 to-black/30'
 					)}
 				>
 					<nav className='bg-white w-[325px] mx-auto py-11'>

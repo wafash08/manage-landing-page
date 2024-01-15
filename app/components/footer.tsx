@@ -32,13 +32,13 @@ const LINKS_2 = [
 
 export default function Footer() {
 	return (
-		<footer className='bg-neutral-very-dark-blue py-16'>
-			<Container className='flex justify-between'>
-				<div className='flex flex-col justify-between'>
-					<Link href='/' className='block'>
-						<Logo />
+		<footer className='bg-neutral-very-dark-blue py-12 md:py-16 px-6'>
+			<Container className='flex flex-col md:flex-row md:justify-between'>
+				<div className='order-3 md:order-none flex flex-col-reverse gap-14 md:gap-0 md:flex-col justify-between px-4 md:px-0'>
+					<Link href='/' className='block mx-auto md:mx-0'>
+						<Logo className='text-white' />
 					</Link>
-					<ul className='flex items-center gap-3'>
+					<ul className='flex items-center justify-between md:justify-normal gap-3'>
 						{SOCIAL_MEDIA_LIST.map(({ icon, name }) => {
 							return (
 								<li key={name}>
@@ -49,7 +49,7 @@ export default function Footer() {
 						})}
 					</ul>
 				</div>
-				<div className='flex gap-56'>
+				<div className='order-2 mb-14 md:mb-0 md:order-none flex md:gap-56 justify-between md:justify-normal px-6 md:px-0'>
 					<ul className='flex flex-col gap-4'>
 						{LINKS_1.map(({ label }) => {
 							return (
@@ -75,8 +75,8 @@ export default function Footer() {
 						})}
 					</ul>
 				</div>
-				<div className='flex flex-col justify-between'>
-					<form className='self-end'>
+				<div className='order-1 mb-14 md:mb-0 md:order-none flex flex-col justify-between'>
+					<form className='md:self-end'>
 						<div className='flex gap-2'>
 							<input
 								type='text'
@@ -94,10 +94,13 @@ export default function Footer() {
 							</button>
 						</div>
 					</form>
-					<p className='self-end text-xs text-neutral-dark-grayish-blue font-medium'>
+					<p className='hidden md:block self-end text-xs text-neutral-dark-grayish-blue font-medium'>
 						Copyright 2020. All Rights Reserved
 					</p>
 				</div>
+				<p className='md:hidden order-4 text-xs text-center text-neutral-dark-grayish-blue font-medium mt-14'>
+					Copyright 2020. All Rights Reserved
+				</p>
 			</Container>
 		</footer>
 	);
