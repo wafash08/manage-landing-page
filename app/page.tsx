@@ -87,6 +87,7 @@ export default function Home() {
 							alt='Intro Illustration'
 							width={580}
 							height={525}
+							priority
 						/>
 					</div>
 				</Container>
