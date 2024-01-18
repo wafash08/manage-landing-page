@@ -8,6 +8,7 @@ import {
 	TwitterIcon,
 	YoutubeIcon,
 } from './icons';
+import SubscribeForm from './subscribe-form';
 
 const SOCIAL_MEDIA_LIST = [
 	{ name: 'facebook', icon: <FacebookIcon /> },
@@ -32,7 +33,7 @@ const LINKS_2 = [
 
 export default function Footer() {
 	return (
-		<footer className='bg-neutral-very-dark-blue py-12 md:py-16 px-6'>
+		<footer className='bg-neutral-very-dark-blue pt-12 pb-6 md:pt-16 md:pb-8 px-6'>
 			<Container className='flex flex-col md:flex-row md:justify-between'>
 				<div className='order-3 md:order-none flex flex-col-reverse gap-14 md:gap-0 md:flex-col justify-between px-4 md:px-0'>
 					<Link href='/' className='block mx-auto md:mx-0'>
@@ -76,24 +77,9 @@ export default function Footer() {
 					</ul>
 				</div>
 				<div className='order-1 mb-14 md:mb-0 md:order-none flex flex-col justify-between'>
-					<form className='md:self-end'>
-						<div className='flex gap-2'>
-							<input
-								type='text'
-								name='subscription'
-								id='subscription'
-								placeholder='Updates in your inbox...'
-								className='text-xs text-neutral-dark-grayish-blue py-4 px-5 rounded-full w-full md:w-[200px]'
-							/>
-							<button
-								type='submit'
-								className='group relative py-4 px-6 rounded-full text-xs text-neutral-very-light-gray bg-primary-bright-red'
-							>
-								<span>Go</span>
-								<div className='absolute inset-0 rounded-full bg-transparent transition-colors group-hover:bg-white/10' />
-							</button>
-						</div>
-					</form>
+					<div className='md:self-end'>
+						<SubscribeForm />
+					</div>
 					<p className='hidden md:block self-end text-xs text-neutral-dark-grayish-blue font-medium'>
 						Copyright 2020. All Rights Reserved
 					</p>
@@ -102,6 +88,26 @@ export default function Footer() {
 					Copyright 2020. All Rights Reserved
 				</p>
 			</Container>
+			<p className='flex justify-center text-neutral-very-light-gray tracking-wide mt-8 md:mt-12'>
+				<span className='mr-2'>Challenge by</span>
+				<a
+					href='https://www.frontendmentor.io?ref=challenge'
+					target='_blank'
+					className='underline'
+				>
+					Frontend Mentor
+				</a>
+				<span className='mr-2'>. Coded by</span>
+				<a
+					href='https://github.com/wafash08'
+					target='_blank'
+					rel='noreferrer'
+					className='underline'
+				>
+					Wafa Saefulhaq
+				</a>
+				.
+			</p>
 		</footer>
 	);
 }
