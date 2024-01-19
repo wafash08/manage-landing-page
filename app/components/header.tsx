@@ -48,8 +48,6 @@ export default function Header() {
 		}
 	}, [open]);
 
-	console.log(open);
-
 	return (
 		<header
 			className={clsx(
