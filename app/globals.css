@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* for styling scrollbar */
+/* see https://css-tricks.com/the-current-state-of-styling-scrollbars-in-css/ */
+#testimonial {
+	scrollbar-color: #242d52 #bac1da;
+}
+#testimonial::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+#testimonial::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	background: #242d52;
+}
+#testimonial::-webkit-scrollbar-track {
+	background: #bac1da;
+}

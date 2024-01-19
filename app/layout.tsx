@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Header from './components/header';
 import './globals.css';
 import Footer from './components/footer';
-import Head from 'next/head';
 
 const be_vietnam_pro = Be_Vietnam_Pro({
 	weight: ['400', '500', '700'],
@@ -20,8 +19,15 @@ export const metadata: Metadata = {
 		title: 'Manage landing page',
 		description:
 			'Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.',
+		url: 'https://manage-landing-page-mu-seven.vercel.app',
 		siteName: 'Manage landing page',
-		images: '/og.png',
+		images: [
+			{
+				url: 'https://manage-landing-page-mu-seven.vercel.app/og.png',
+				width: 580,
+				height: 549,
+			},
+		],
 		locale: 'id_ID',
 		type: 'website',
 	},
