@@ -186,7 +186,7 @@ export default function Home() {
 				</h3>
 				<ul
 					id='testimonial'
-					className='flex gap-[30px] overflow-auto snap-x snap-mandatory py-9 mb-12'
+					className='flex gap-[30px] overflow-auto snap-x snap-mandatory py-9 mb-12 px-[18px] md:px-0'
 				>
 					{TESTIMONIALS.map(({ avatar, name, testminoy }) => {
 						return (

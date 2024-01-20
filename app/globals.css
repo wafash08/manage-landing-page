@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* main section:nth-child(3) * {
+	@apply border border-red-700;
+} */
+
 /* for styling scrollbar */
 /* see https://css-tricks.com/the-current-state-of-styling-scrollbars-in-css/ */
 #testimonial {
