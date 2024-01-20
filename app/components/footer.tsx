@@ -88,7 +88,7 @@ export default function Footer() {
 					Copyright 2020. All Rights Reserved
 				</p>
 			</Container>
-			<p className='flex justify-center text-neutral-very-light-gray tracking-wide mt-8 md:mt-12'>
+			<p className='flex flex-wrap justify-center text-neutral-very-light-gray tracking-wide mt-8 md:mt-12'>
 				<span className='mr-2'>Challenge by</span>
 				<a
 					href='https://www.frontendmentor.io?ref=challenge'

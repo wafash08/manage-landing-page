@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import Container from './container';
 import { Logo, LogoMobile } from './icons';
 import CTAButton from './cta-button';
+import useOutsideClick from '../hooks/useOutsideClick';
 
 function useScroll(threshold = 0) {
 	const [isScrolled, setScrolled] = useState<boolean>(false);
@@ -37,8 +38,14 @@ export default function Header() {
 	const [open, setOpen] = useState(false);
 
 	const handleOpenMenu = () => {
-		setOpen(!open);
+		setOpen(true);
 	};
+
+	const handleCloseMenu = () => {
+		setOpen(false);
+	};
+
+	const ref = useOutsideClick(handleCloseMenu);
 
 	useEffect(() => {
 		if (open) {
@@ -88,7 +95,7 @@ export default function Header() {
 				<div className='flex items-center md:hidden'>
 					<button
 						type='button'
-						onClick={handleOpenMenu}
+						onClick={open ? handleCloseMenu : handleOpenMenu}
 						className='w-10 h-10 inline-flex items-center justify-center'
 					>
 						<span className='sr-only'>Open Menu</span>
@@ -142,7 +149,7 @@ export default function Header() {
 						open && 'bg-gradient-to-b from-transparent via-black/10 to-black/30'
 					)}
 				>
-					<nav className='bg-white w-[325px] mx-auto py-11'>
+					<nav className='bg-white w-[325px] mx-auto py-11' ref={ref}>
 						<ul className='flex flex-col'>
 							{LINKS.map(({ href, label }) => {
 								return (
