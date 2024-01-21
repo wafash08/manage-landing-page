@@ -10,7 +10,8 @@ export default function TestimonialSection() {
 			</h2>
 			<ul
 				id='testimonial'
-				className='flex gap-[30px] overflow-auto snap-x snap-mandatory py-9 mb-12 px-[18px] md:px-0'
+				className='flex gap-[30px] overflow-scroll snap-x snap-mandatory py-9 mb-12 px-[18px] md:px-0'
+				tabIndex={0}
 			>
 				{TESTIMONIALS.map(({ avatar, name, testminoy }) => {
 					return (

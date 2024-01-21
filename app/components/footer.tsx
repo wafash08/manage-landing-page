@@ -37,6 +37,7 @@ export default function Footer() {
 			<Container className='flex flex-col md:flex-row md:justify-between'>
 				<div className='order-3 md:order-none flex flex-col-reverse gap-14 md:gap-0 md:flex-col justify-between px-4 md:px-0'>
 					<Link href='/' className='block mx-auto md:mx-0'>
+						<span className='sr-only'>Go to Manage home page</span>
 						<Logo className='text-white' />
 					</Link>
 					<ul className='flex items-center justify-between md:justify-normal gap-3'>
