@@ -5,9 +5,9 @@ import CTAButton from './cta-button';
 export default function TestimonialSection() {
 	return (
 		<section className='mb-10 md:mb-[180px]'>
-			<h3 className='text-primary-dark-blue font-medium text-[30px] md:text-[38px] text-center mb-14 md:mb-[72px]'>
+			<h2 className='text-primary-dark-blue font-medium text-[30px] md:text-[38px] text-center mb-14 md:mb-[72px]'>
 				What they&apos;ve said
-			</h3>
+			</h2>
 			<ul
 				id='testimonial'
 				className='flex gap-[30px] overflow-auto snap-x snap-mandatory py-9 mb-12 px-[18px] md:px-0'

@@ -42,11 +42,11 @@ export default function BannerSection() {
 					<h1 className='text-[38px] md:text-[52px] text-center md:text-left w-[320px] leading-[50px] md:w-[440px] text-primary-dark-blue font-medium md:leading-[64px] mb-2 md:mb-8'>
 						Bring everyone together to build better products.
 					</h1>
-					<h4 className='text-base text-center md:text-left text-neutral-dark-grayish-blue font-normal leading-[24px] mb-7 md:mb-10'>
+					<div className='text-base text-center md:text-left text-neutral-dark-grayish-blue font-normal leading-[24px] mb-7 md:mb-10'>
 						<p>Manage makes it simple for software teams</p>
 						<p>to plan day-to-day tasks while keeping the</p>
 						<p>larger team goals in view.</p>
-					</h4>
+					</div>
 					<div>
 						<CTAButton>Get Started</CTAButton>
 					</div>
